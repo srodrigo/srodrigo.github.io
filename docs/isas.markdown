@@ -40,7 +40,7 @@ The user lands on the web page to create a retail ISA. There is a list of funds 
 Here is a mockup of the user journey:
 
 <div style="text-align:center">
-<img src="{{site.baseurl | prepend: site.url}}/assets/img/isa-user-journey.gif" alt="Happy path - User journey"/>
+<img src="{{ 'assets/img/isa-user-journey.gif' | relative_url }}" alt="Happy path - User journey"/>
 </div>
 
 ### API Design
@@ -54,7 +54,7 @@ There is another requirement to anticipate users selecting multiple funds in the
 The exercise expects assumptions regarding the backend services already available. We are assuming that there is a set of shared backend services that can be used by both `/isa/employee` and the new `/isa/retail`, as well as any other APIs such `/pensions`. On the diagram below, there are 3 backend services (Users, ISAs, Pensions) and 2 of them are used by both `/isa` frontend APIs.
 
 <div style="text-align:center">
-<img src="{{site.baseurl | prepend: site.url}}/assets/img/isa-dependencies-diagram.png" alt="Depencencies diagram"/>
+<img src="{{ 'assets/img/isa-dependencies-diagram.png' | relative_url }}" alt="Depencencies diagram"/>
 </div>
 
 ### Sequence diagram
@@ -62,5 +62,5 @@ The exercise expects assumptions regarding the backend services already availabl
 The sequence diagram below highlights the main interactions between user, web page, retail API and backend services. It follows the steps on the _User Journey_ section and follows the _API design_ on the previous section.
 
 <div style="text-align:center">
-<img src="{{site.baseurl | prepend: site.url}}/assets/img/isa-sequence-diagram.png" alt="Happy path - Sequence diagram"/>
+<img src="{{ 'assets/img/isa-sequence-diagram.png' | relative_url }}" alt="Happy path - Sequence diagram"/>
 </div>
