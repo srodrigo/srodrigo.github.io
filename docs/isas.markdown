@@ -11,26 +11,26 @@ This exercise requires adding support for ISAs for retail customers. This functi
 ## Main assumptions
 
 1. The user is already logged in when they start using the new feature.
-2. The list of available funds is server-side rendered and available when the user lands on the page. Therefore, the website doesn't need to make a request to retrieve the funds.
+2. The list of available funds is server-side rendered and available when the user lands on the page. Therefore, the client-side doesn't need to make a request to retrieve the funds.
 3. The user ID can be retrieved from the API token, so it doesn't need to be included in the requests.
-4. There is a set of shared API services (ISAs, Users, probably Pensions) that web and mobile APIs, which act as a facade, can make use of.
-5. While the exercise doesn't specify this detail, we assume that the website could support multiple currencies.
+4. There is a set of shared API services (ISAs, Users, probably Pensions) that web and mobile APIs, which act as a facade, can use to serve the Web and Mobile clients.
+5. While the exercise doesn't specify this detail, we assume that the new feature could support multiple currencies in the future.
 
 ## Solution
 
 ### Overview
 
-The solution focuses on Web, but it could be easily adapted for Mobile apps. Only the happy path (no errors occur during the user journey) has been considered.
+The solution focuses on the Web client, but it could be easily adapted for Mobile as well. Only the happy path (no errors occur during the user journey) has been considered.
 
 Since the exercise specifies that we can choose how to document or present the solution to provide a starting point for a discussion, here is a brief summary of the approach taken:
 
 1. Design the user journey for the new feature by providing a mockup.
 2. Design a new API for retail ISAs, explaining the assumptions made regarding existing API services that could be used to implement the feature.
-3. Define the main interactions between user, web page and APIs via activity diagram.
+3. Define the main interactions between user, Web client and APIs via activity diagram.
 
 ### User Journey
 
-The user lands on the web page to create a retail ISA. There is a list of funds available. The user must follow the steps below:
+The user lands on the Web page to create a retail ISA. This page includes a web form to select and introduce the data. There is a list of funds available. The user must follow the steps below:
 
 1. Select a fund from the list.
 2. Enter an amount to deposit. The input component is of type number, so the only validation at this stage would be to forbid £0.
