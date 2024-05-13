@@ -64,3 +64,5 @@ The sequence diagram below highlights the main interactions between user, web pa
 <div style="text-align:center">
 <img src="{{ '../assets/img/isa-sequence-diagram.png' | relative_url }}" alt="Happy path - Sequence diagram"/>
 </div>
+
+The above diagram supports the requirement to record the fund and amount so they can be queried at a later date. The _ISAs service_ can include an `/isa/retail?userId=1234` endpoint to query the ISAs for a particular user.
