@@ -13,7 +13,7 @@ This exercise requires adding support for ISAs for retail customers. This functi
 1. The user is already logged in when they start using the new feature.
 2. The list of available funds is server-side rendered and available when the user lands on the page. Therefore, the client-side doesn't need to make a request to retrieve the funds.
 3. The user ID can be retrieved from the API token, so it doesn't need to be included in the requests.
-4. There is a set of shared API services (ISAs, Users, probably Pensions) that web and mobile APIs, which act as a facade, can use to serve the Web and Mobile clients.
+4. There is a set of shared API services (ISAs, Users, probably Pensions) that Web and Mobile APIs, which act as a facade, can use to serve the Web and Mobile clients.
 5. While the exercise doesn't specify this detail, we assume that the new feature could support multiple currencies in the future.
 
 ## Solution
